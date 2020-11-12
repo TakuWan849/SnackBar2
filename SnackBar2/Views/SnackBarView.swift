@@ -18,7 +18,7 @@ class SnackBarView: UIView {
         label.textColor = .systemBackground
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.textColor = .label
+        label.textColor = .white
         
         return label
     }()
@@ -27,7 +27,7 @@ class SnackBarView: UIView {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
-        print("lazyが呼ばれました")
+//        print("lazyが呼ばれました")
         
         return imageView
     }()
@@ -36,7 +36,7 @@ class SnackBarView: UIView {
         self.viewModel = viewModel
         super.init(frame: frame)
         
-        print("初期化！")
+//        print("初期化！")
         
         SetUpBarView()
         addSubview(barLabel)
@@ -84,7 +84,8 @@ class SnackBarView: UIView {
     // layout
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("layout処理")
+//        print("layout処理")
+        // lazy barImageViewはここで呼ばれる
         
         if viewModel.image != nil {
             barImageView.frame = CGRect(x: 5, y: 5, width: frame.height - 10, height: frame.height - 10)
@@ -92,7 +93,7 @@ class SnackBarView: UIView {
             barLabel.frame = CGRect(
                 x: barImageView.frame.size.width,
                 y: 0,
-                width: frame.size.height - barImageView.frame.size.width,
+                width: frame.size.width - barImageView.frame.size.width,
                 height: frame.size.height - 10
             )
         }

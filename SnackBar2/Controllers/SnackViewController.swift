@@ -112,7 +112,7 @@ class SnackViewController: UIViewController {
         view.addSubview(snackBar)
         
         // 出現
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 1, animations: {
             
             snackBar.frame = CGRect(
                 x: (self.view.frame.size.width - width) / 2,
@@ -127,7 +127,7 @@ class SnackViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    UIView.animate(withDuration: 2, animations: {
+                    UIView.animate(withDuration: 5, animations: {
                         
                         // 初期位置に戻る
                         snackBar.frame = CGRect(
