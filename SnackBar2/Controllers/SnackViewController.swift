@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  SnackViewController.swift
 //  SnackBar2
 //
-//  Created by 野澤拓己 on 2020/11/12.
+//  Created by 野澤拓己 on 2020/11/13.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SnackViewController: UIViewController {
     
     // 構成要素
     private let HStackView = UIStackView()
@@ -78,6 +78,5 @@ class ViewController: UIViewController {
         HStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
     }
     
+
 }
-    
-    
