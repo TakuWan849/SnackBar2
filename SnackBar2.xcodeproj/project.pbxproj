@@ -16,7 +16,7 @@
 		F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC651E255DDC1D00BA4315 /* Colors.swift */; };
 		F8CC6525255DDEBD00BA4315 /* SnackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC6524255DDEBD00BA4315 /* SnackViewController.swift */; };
 		F8CC652B255DE07400BA4315 /* SnackBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */; };
-		F8CC6531255DE29A00BA4315 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC6530255DE29A00BA4315 /* SnackBar.swift */; };
+		F8CC6531255DE29A00BA4315 /* SnackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC6530255DE29A00BA4315 /* SnackBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		F8CC651E255DDC1D00BA4315 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F8CC6524255DDEBD00BA4315 /* SnackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackViewController.swift; sourceTree = "<group>"; };
 		F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarViewModel.swift; sourceTree = "<group>"; };
-		F8CC6530255DE29A00BA4315 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
+		F8CC6530255DE29A00BA4315 /* SnackBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			children = (
 				F8CC6528255DDF4300BA4315 /* StoryBorads */,
 				F85E7293255DD2A5006ADF12 /* SnackButton.swift */,
-				F8CC6530255DE29A00BA4315 /* SnackBar.swift */,
+				F8CC6530255DE29A00BA4315 /* SnackBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CC6531255DE29A00BA4315 /* SnackBar.swift in Sources */,
+				F8CC6531255DE29A00BA4315 /* SnackBarView.swift in Sources */,
 				F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */,
 				F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */,
 				F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */,

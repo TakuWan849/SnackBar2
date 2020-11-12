@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SnackBar: UIView {
+class SnackBarView: UIView {
     
     private var viewModel : SnackBarViewModel
     private var handler : Handler?
