@@ -59,6 +59,7 @@ class SnackViewController: UIViewController {
         
     }
     
+    // ボタンタップ時のイベント
     @objc private func didTappedButton(_ sender: UIButton) {
         
         if sender.tag == 1 {
