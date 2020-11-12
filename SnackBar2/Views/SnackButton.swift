@@ -22,14 +22,12 @@ final class SnackButton: UIButton {
     }
     
     private func SetUpButton() {
-        
-        backgroundColor = UIColor.white
-        setTitleColor( myColor.skyBlue, for: .normal)
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+
+        backgroundColor = UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0)
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         contentEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         layer.cornerRadius = 20
-        layer.borderColor =  myColor.skyBlue.cgColor
-        layer.borderWidth = 2
         
     }
     
