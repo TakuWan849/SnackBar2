@@ -9,10 +9,10 @@ import UIKit
 
 class SnackViewController: UIViewController {
     
-    // 構成要素
+    /// -  構成要素
     private let HStackView = UIStackView()
 
-    // layout
+    /// -  layout
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +26,7 @@ class SnackViewController: UIViewController {
         setStackViewConstraits()
     }
     
-    // StackViewの設定
+    /// -  StackViewの設定
     private func configureStackView() {
         view.addSubview(HStackView)
         
@@ -40,7 +40,7 @@ class SnackViewController: UIViewController {
  
     }
     
-    // ボタンを作成する関数
+    /// -  ボタンを作成する関数
     private func addButtonsToStackView() {
         let numberOfButtons = 2
   
@@ -59,13 +59,13 @@ class SnackViewController: UIViewController {
         
     }
     
-    // ボタンタップ時のイベント
+    /// -  ボタンタップ時のイベント
     @objc private func didTappedButton(_ sender: UIButton) {
         
         let viewModel : SnackBarViewModel
         
         if sender.tag == 1 {
-            print("firstButton")
+//            print("firstButton")
             viewModel = SnackBarViewModel.init(
                 type: .info,
                 text: "Hello world",
@@ -73,14 +73,14 @@ class SnackViewController: UIViewController {
             )
         }
         else {
-            print("SecondButton")
+//            print("SecondButton")
             viewModel = SnackBarViewModel.init(
                 type: .action(handler: { [weak self] in
                     DispatchQueue.main.async {
                         self?.showAlert()
                     }
                 }),
-                text: "show alert",
+                text: "Show Alert",
                 image: nil
             )
         }
@@ -91,9 +91,23 @@ class SnackViewController: UIViewController {
         showSnackBar(snackBar: snackBar)
     }
     
-    // Event
+    /// -  Event
     private func showAlert() {
         
+        let alert = UIAlertController(
+            title: "Work",
+            message: "Tapped Action!",
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "Dismiss",
+                style: .cancel,
+                handler: nil
+        ))
+        
+        present(alert, animated: true)
     }
     
     private func showSnackBar(snackBar: SnackBarView) {
@@ -112,7 +126,7 @@ class SnackViewController: UIViewController {
         view.addSubview(snackBar)
         
         // 出現
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             
             snackBar.frame = CGRect(
                 x: (self.view.frame.size.width - width) / 2,
@@ -125,9 +139,9 @@ class SnackViewController: UIViewController {
             // 出現が完了していたときの処理
             if done {
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                     
-                    UIView.animate(withDuration: 5, animations: {
+                    UIView.animate(withDuration: 0.5, animations: {
                         
                         // 初期位置に戻る
                         snackBar.frame = CGRect(
@@ -152,7 +166,7 @@ class SnackViewController: UIViewController {
         
     }
     
-    // オートレイアウト
+    /// -  オートレイアウト
     private func setStackViewConstraits() {
         
         HStackView.translatesAutoresizingMaskIntoConstraints = false

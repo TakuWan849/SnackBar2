@@ -10,14 +10,15 @@ import UIKit
 class SnackBarView: UIView {
     
     private var viewModel : SnackBarViewModel
-    private var handler : Handler?
+    public var handler : Handler?
     
-    // 構成要素
+    /// -  構成要素
     private let barLabel : UILabel = {
         let label = UILabel()
         label.textColor = .systemBackground
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.font = UIFont(name: "label", size: 40)
         label.textColor = .white
         
         return label
@@ -27,6 +28,7 @@ class SnackBarView: UIView {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .white
 //        print("lazyが呼ばれました")
         
         return imageView
@@ -45,7 +47,7 @@ class SnackBarView: UIView {
         configureEvent()
     }
     
-    // Set up
+    /// -  Set up
     private func SetUpBarView() {
         backgroundColor = .label
         
@@ -54,7 +56,7 @@ class SnackBarView: UIView {
         layer.masksToBounds = true
     }
     
-    // configure
+    /// -  configure
     private func configureEvent() {
         barLabel.text = viewModel.text
         barImageView.image = viewModel.image
@@ -81,7 +83,7 @@ class SnackBarView: UIView {
         handler?()
     }
     
-    // layout
+    /// -  layout
     override func layoutSubviews() {
         super.layoutSubviews()
 //        print("layout処理")
@@ -92,7 +94,7 @@ class SnackBarView: UIView {
             
             barLabel.frame = CGRect(
                 x: barImageView.frame.size.width,
-                y: 0,
+                y: 5,
                 width: frame.size.width - barImageView.frame.size.width,
                 height: frame.size.height - 10
             )
