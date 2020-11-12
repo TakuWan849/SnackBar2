@@ -31,10 +31,9 @@ class ViewController: UIViewController {
         view.addSubview(HStackView)
         
         HStackView.axis = .horizontal
-        HStackView.distribution = .fillProportionally
+        HStackView.distribution = .fillEqually
         HStackView.alignment = .center
-        HStackView.spacing = 5
-        HStackView.backgroundColor = .red
+        HStackView.spacing = 10
 
         // ボタンをスタックビューに追加する処理
         addButtonsToStackView()
@@ -77,9 +76,8 @@ class ViewController: UIViewController {
         HStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         HStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
         HStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
-        HStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -view.frame.size.height * 0.85 ).isActive = true
     }
     
-    }
+}
     
     
