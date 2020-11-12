@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         button.layer.cornerRadius = 15.0
         button.layer.borderColor =  UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0).cgColor
-        button.layer.borderWidth = 2
+        button.layer.borderWidth = 5
         
         return button
     }()
