@@ -62,12 +62,94 @@ class SnackViewController: UIViewController {
     // ボタンタップ時のイベント
     @objc private func didTappedButton(_ sender: UIButton) {
         
+        let viewModel : SnackBarViewModel
+        
         if sender.tag == 1 {
             print("firstButton")
+            viewModel = SnackBarViewModel.init(
+                type: .info,
+                text: "Hello world",
+                image: UIImage(systemName: "house")
+            )
         }
         else {
             print("SecondButton")
+            viewModel = SnackBarViewModel.init(
+                type: .action(handler: { [weak self] in
+                    DispatchQueue.main.async {
+                        self?.showAlert()
+                    }
+                }),
+                text: "show alert",
+                image: nil
+            )
         }
+        
+        let frame = CGRect(x: 0, y: 0, width: view.frame.size.width / 1.5, height: 60)
+        let snackBar = SnackBarView(viewModel: viewModel, frame: frame)
+        
+        showSnackBar(snackBar: snackBar)
+    }
+    
+    // Event
+    private func showAlert() {
+        
+    }
+    
+    private func showSnackBar(snackBar: SnackBarView) {
+        // SnackBarViewが現れる処理
+        let width = view.frame.size.width / 1.5
+        
+        // 初期位置
+        // didTappedButtonで指定したframeの上書き
+        snackBar.frame = CGRect(
+            x: (view.frame.size.width - width) / 2,
+            y: view.frame.size.height,
+            width: width,
+            height: 60
+        )
+        
+        view.addSubview(snackBar)
+        
+        // 出現
+        UIView.animate(withDuration: 2, animations: {
+            
+            snackBar.frame = CGRect(
+                x: (self.view.frame.size.width - width) / 2,
+                y: self.view.frame.size.height - 70,
+                width: width,
+                height: 60
+            )
+            
+        }, completion: { done in
+            // 出現が完了していたときの処理
+            if done {
+                
+                DispatchQueue.main.async {
+                    
+                    UIView.animate(withDuration: 2, animations: {
+                        
+                        // 初期位置に戻る
+                        snackBar.frame = CGRect(
+                            x: (self.view.frame.size.width - width) / 2,
+                            y: self.view.frame.size.height,
+                            width: width,
+                            height: 60
+                        )
+                        
+                    }, completion: { finished in
+                        
+                        snackBar.removeFromSuperview()
+                        
+                    })
+                    
+                }
+                
+            }
+            
+        })
+        
+        
     }
     
     // オートレイアウト
