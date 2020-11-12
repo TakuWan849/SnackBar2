@@ -10,28 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // 構成要素
-    private let HStackView : UIStackView = {
-        let view = UIStackView()
-        view.axis = .horizontal
-        view.distribution = .fillEqually
-        view.alignment = .center
-        view.spacing = 5
-        
-        return view
-    }()
-    
-    private let snackButton : UIButton = {
-        let button = UIButton()
-        button.backgroundColor = UIColor.white
-        button.setTitleColor( UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0), for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14.0)
-        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
-        button.layer.cornerRadius = 15.0
-        button.layer.borderColor =  UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0).cgColor
-        button.layer.borderWidth = 2
-        
-        return button
-    }()
+    private let HStackView = UIStackView()
 
     // layout
     override func viewDidLoad() {
@@ -43,32 +22,56 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+
         setStackViewConstraits()
     }
     
     // StackViewの設定
     private func configureStackView() {
         view.addSubview(HStackView)
+        
+        HStackView.axis = .horizontal
+        HStackView.distribution = .fillEqually
+        HStackView.alignment = .leading
+        HStackView.spacing = 5
+        HStackView.backgroundColor = .red
 
         // ボタンをスタックビューに追加する処理
         addButtonsToStackView()
-        
+ 
     }
     
     // ボタンを作成する関数
     private func addButtonsToStackView() {
         let numberOfButtons = 2
-        
+  
         for i in 1...numberOfButtons {
-            let button = snackButton
+            
+            // 外部からクラスを呼ぶとうまくいく
+            let button = SnackButton()
+            
             button.tag = i
             button.setTitle("Show SnackBar : \(i)", for: .normal)
             
-            button.addTarget(self, action: #selector(didTappedButton), for: .touchUpInside)
+            configureButton()
+            
+            button.addTarget(self, action: #selector(didTappedButton(_:)), for: .touchUpInside)
             
             HStackView.addArrangedSubview(button)
         }
+        
+    }
+    
+    // ボタンの構成
+    private func configureButton() {
+        
+//        snackButton.backgroundColor = UIColor.white
+//        snackButton.setTitleColor( UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0), for: .normal)
+//        snackButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14.0)
+//        snackButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+//        snackButton.layer.cornerRadius = 15.0
+//        snackButton.layer.borderColor =  UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0).cgColor
+//        snackButton.layer.borderWidth = 2
         
     }
     
