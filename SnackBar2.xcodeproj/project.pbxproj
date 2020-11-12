@@ -16,6 +16,7 @@
 		F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC651E255DDC1D00BA4315 /* Colors.swift */; };
 		F8CC6525255DDEBD00BA4315 /* SnackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC6524255DDEBD00BA4315 /* SnackViewController.swift */; };
 		F8CC652B255DE07400BA4315 /* SnackBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */; };
+		F8CC6531255DE29A00BA4315 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC6530255DE29A00BA4315 /* SnackBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F8CC651E255DDC1D00BA4315 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F8CC6524255DDEBD00BA4315 /* SnackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackViewController.swift; sourceTree = "<group>"; };
 		F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarViewModel.swift; sourceTree = "<group>"; };
+		F8CC6530255DE29A00BA4315 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				F8CC6528255DDF4300BA4315 /* StoryBorads */,
-				F88C473C255D476F00A0DA46 /* SnackBar */,
 				F85E7293255DD2A5006ADF12 /* SnackButton.swift */,
+				F8CC6530255DE29A00BA4315 /* SnackBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -72,20 +74,13 @@
 		F88C4726255D476500A0DA46 /* SnackBar2 */ = {
 			isa = PBXGroup;
 			children = (
+				F8CC652F255DE23A00BA4315 /* models */,
 				F8CC6522255DDE6A00BA4315 /* Controllers */,
 				F8CC651D255DDC0500BA4315 /* Resources */,
 				F85E7296255DD2B4006ADF12 /* Views */,
 				F88C4735255D476700A0DA46 /* Info.plist */,
 			);
 			path = SnackBar2;
-			sourceTree = "<group>";
-		};
-		F88C473C255D476F00A0DA46 /* SnackBar */ = {
-			isa = PBXGroup;
-			children = (
-				F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */,
-			);
-			path = SnackBar;
 			sourceTree = "<group>";
 		};
 		F8CC651D255DDC0500BA4315 /* Resources */ = {
@@ -114,6 +109,14 @@
 				F88C4732255D476700A0DA46 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBorads;
+			sourceTree = "<group>";
+		};
+		F8CC652F255DE23A00BA4315 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CC6531255DE29A00BA4315 /* SnackBar.swift in Sources */,
 				F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */,
 				F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */,
 				F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */,
