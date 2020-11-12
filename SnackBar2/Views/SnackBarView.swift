@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SnackBarView: UIView {
+final class SnackBarView: UIView {
     
     private var viewModel : SnackBarViewModel
     public var handler : Handler?
@@ -18,7 +18,7 @@ class SnackBarView: UIView {
         label.textColor = .systemBackground
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.textColor = .white
         
         return label
@@ -49,7 +49,7 @@ class SnackBarView: UIView {
     
     /// -  Set up
     private func SetUpBarView() {
-        backgroundColor = .label
+        backgroundColor = .secondaryLabel
         
         clipsToBounds = true
         layer.cornerRadius = 8
@@ -95,7 +95,7 @@ class SnackBarView: UIView {
             barLabel.frame = CGRect(
                 x: barImageView.frame.size.width,
                 y: 5,
-                width: frame.size.width - barImageView.frame.size.width,
+                width: frame.size.width - barImageView.frame.size.width - 20,
                 height: frame.size.height - 10
             )
         }

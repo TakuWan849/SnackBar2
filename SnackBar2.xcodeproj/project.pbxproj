@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E7293255DD2A5006ADF12 /* SnackButton.swift */; };
+		F85E7294255DD2A5006ADF12 /* ShowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E7293255DD2A5006ADF12 /* ShowButton.swift */; };
 		F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88C4727255D476500A0DA46 /* AppDelegate.swift */; };
 		F88C472A255D476500A0DA46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88C4729255D476500A0DA46 /* SceneDelegate.swift */; };
 		F88C472F255D476500A0DA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88C472D255D476500A0DA46 /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F85E7293255DD2A5006ADF12 /* SnackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackButton.swift; sourceTree = "<group>"; };
+		F85E7293255DD2A5006ADF12 /* ShowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowButton.swift; sourceTree = "<group>"; };
 		F88C4724255D476500A0DA46 /* SnackBar2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackBar2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88C4727255D476500A0DA46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F88C4729255D476500A0DA46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				F8CC6528255DDF4300BA4315 /* StoryBorads */,
-				F85E7293255DD2A5006ADF12 /* SnackButton.swift */,
+				F85E7293255DD2A5006ADF12 /* ShowButton.swift */,
 				F8CC6530255DE29A00BA4315 /* SnackBarView.swift */,
 			);
 			path = Views;
@@ -86,6 +86,7 @@
 		F8CC651D255DDC0500BA4315 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F8CC6535255DFD2500BA4315 /* font */,
 				F8CC651E255DDC1D00BA4315 /* Colors.swift */,
 				F88C4727255D476500A0DA46 /* AppDelegate.swift */,
 				F88C4729255D476500A0DA46 /* SceneDelegate.swift */,
@@ -117,6 +118,13 @@
 				F8CC652A255DE07400BA4315 /* SnackBarViewModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		F8CC6535255DFD2500BA4315 /* font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CC6531255DE29A00BA4315 /* SnackBarView.swift in Sources */,
-				F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */,
+				F85E7294255DD2A5006ADF12 /* ShowButton.swift in Sources */,
 				F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */,
 				F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */,
 				F88C472A255D476500A0DA46 /* SceneDelegate.swift in Sources */,

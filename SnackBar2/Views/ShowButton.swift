@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SnackButton: UIButton {
+final class ShowButton: UIButton {
     
     let myColor = Colors()
     

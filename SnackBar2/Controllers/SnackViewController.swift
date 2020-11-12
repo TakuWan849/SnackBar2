@@ -47,7 +47,7 @@ class SnackViewController: UIViewController {
         for i in 1...numberOfButtons {
             
             // 外部からクラスを呼ぶとうまくいく
-            let button = SnackButton()
+            let button = ShowButton()
             
             button.tag = i
             button.setTitle("Show SnackBar : \(i)", for: .normal)
@@ -112,7 +112,7 @@ class SnackViewController: UIViewController {
     
     private func showSnackBar(snackBar: SnackBarView) {
         // SnackBarViewが現れる処理
-        let width = view.frame.size.width / 1.5
+        let width = view.frame.size.width / 1.2
         
         // 初期位置
         // didTappedButtonで指定したframeの上書き
