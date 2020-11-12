@@ -27,6 +27,7 @@ class SnackBarView: UIView {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
+        print("lazyが呼ばれました")
         
         return imageView
     }()
@@ -34,6 +35,8 @@ class SnackBarView: UIView {
     init(viewModel: SnackBarViewModel, frame: CGRect) {
         self.viewModel = viewModel
         super.init(frame: frame)
+        
+        print("初期化！")
         
         SetUpBarView()
         addSubview(barLabel)
@@ -77,9 +80,29 @@ class SnackBarView: UIView {
     @objc private func didTappedSnackBar() {
         handler?()
     }
+    
+    // layout
     override func layoutSubviews() {
         super.layoutSubviews()
+        print("layout処理")
+        
+        if viewModel.image != nil {
+            barImageView.frame = CGRect(x: 5, y: 5, width: frame.height - 10, height: frame.height - 10)
+            
+            barLabel.frame = CGRect(
+                x: barImageView.frame.size.width,
+                y: 0,
+                width: frame.size.height - barImageView.frame.size.width,
+                height: frame.size.height - 10
+            )
+        }
+        else {
+            
+            barLabel.frame = bounds
+            
+        }
     }
+    
     
     
     required init?(coder: NSCoder) {
