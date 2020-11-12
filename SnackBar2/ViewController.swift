@@ -53,25 +53,10 @@ class ViewController: UIViewController {
             button.tag = i
             button.setTitle("Show SnackBar : \(i)", for: .normal)
             
-            configureButton()
-            
             button.addTarget(self, action: #selector(didTappedButton(_:)), for: .touchUpInside)
             
             HStackView.addArrangedSubview(button)
         }
-        
-    }
-    
-    // ボタンの構成
-    private func configureButton() {
-        
-//        snackButton.backgroundColor = UIColor.white
-//        snackButton.setTitleColor( UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0), for: .normal)
-//        snackButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14.0)
-//        snackButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
-//        snackButton.layer.cornerRadius = 15.0
-//        snackButton.layer.borderColor =  UIColor(displayP3Red: 79/255, green: 172/255, blue: 254/255,alpha: 1.0).cgColor
-//        snackButton.layer.borderWidth = 2
         
     }
     
