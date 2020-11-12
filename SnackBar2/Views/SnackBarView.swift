@@ -38,7 +38,8 @@ class SnackBarView: UIView {
         SetUpBarView()
         addSubview(barLabel)
         addSubview(barImageView)
-
+        
+        configureEvent()
     }
     
     // Set up
@@ -61,10 +62,21 @@ class SnackBarView: UIView {
         case .action(let handler):
             self.handler = handler
             // タップイベントの有効化
+            isUserInteractionEnabled = true
+            // タップ時の処理を書く
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(didTappedSnackBar))
+                /// -  タップ回数の指定
+            gesture.numberOfTouchesRequired = 1
+            gesture.numberOfTapsRequired = 1
+            
+            addGestureRecognizer(gesture)
 
         }
     }
     
+    @objc private func didTappedSnackBar() {
+        handler?()
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
     }
