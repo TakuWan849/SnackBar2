@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E7293255DD2A5006ADF12 /* SnackButton.swift */; };
 		F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88C4727255D476500A0DA46 /* AppDelegate.swift */; };
 		F88C472A255D476500A0DA46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88C4729255D476500A0DA46 /* SceneDelegate.swift */; };
 		F88C472C255D476500A0DA46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88C472B255D476500A0DA46 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F85E7293255DD2A5006ADF12 /* SnackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackButton.swift; sourceTree = "<group>"; };
 		F88C4724255D476500A0DA46 /* SnackBar2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnackBar2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88C4727255D476500A0DA46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F88C4729255D476500A0DA46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F85E7296255DD2B4006ADF12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F85E7293255DD2A5006ADF12 /* SnackButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F88C471B255D476500A0DA46 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		F88C4726255D476500A0DA46 /* SnackBar2 */ = {
 			isa = PBXGroup;
 			children = (
+				F85E7296255DD2B4006ADF12 /* Views */,
 				F88C473C255D476F00A0DA46 /* SnackBar */,
 				F88C472B255D476500A0DA46 /* ViewController.swift */,
 				F88C4727255D476500A0DA46 /* AppDelegate.swift */,
@@ -145,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */,
 				F88C472C255D476500A0DA46 /* ViewController.swift in Sources */,
 				F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */,
 				F88C472A255D476500A0DA46 /* SceneDelegate.swift in Sources */,

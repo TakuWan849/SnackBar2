@@ -31,8 +31,8 @@ class ViewController: UIViewController {
         view.addSubview(HStackView)
         
         HStackView.axis = .horizontal
-        HStackView.distribution = .fillEqually
-        HStackView.alignment = .leading
+        HStackView.distribution = .fillProportionally
+        HStackView.alignment = .center
         HStackView.spacing = 5
         HStackView.backgroundColor = .red
 
