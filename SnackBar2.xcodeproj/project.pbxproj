@@ -14,6 +14,7 @@
 		F88C472F255D476500A0DA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88C472D255D476500A0DA46 /* Main.storyboard */; };
 		F88C4731255D476700A0DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88C4730255D476700A0DA46 /* Assets.xcassets */; };
 		F88C4734255D476700A0DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88C4732255D476700A0DA46 /* LaunchScreen.storyboard */; };
+		F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC651E255DDC1D00BA4315 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F88C4730255D476700A0DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F88C4733255D476700A0DA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F88C4735255D476700A0DA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8CC651E255DDC1D00BA4315 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		F88C4726255D476500A0DA46 /* SnackBar2 */ = {
 			isa = PBXGroup;
 			children = (
+				F8CC651D255DDC0500BA4315 /* Resources */,
 				F85E7296255DD2B4006ADF12 /* Views */,
 				F88C473C255D476F00A0DA46 /* SnackBar */,
 				F88C472B255D476500A0DA46 /* ViewController.swift */,
@@ -84,6 +87,14 @@
 			children = (
 			);
 			path = SnackBar;
+			sourceTree = "<group>";
+		};
+		F8CC651D255DDC0500BA4315 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8CC651E255DDC1D00BA4315 /* Colors.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85E7294255DD2A5006ADF12 /* SnackButton.swift in Sources */,
+				F8CC651F255DDC1D00BA4315 /* Colors.swift in Sources */,
 				F88C472C255D476500A0DA46 /* ViewController.swift in Sources */,
 				F88C4728255D476500A0DA46 /* AppDelegate.swift in Sources */,
 				F88C472A255D476500A0DA46 /* SceneDelegate.swift in Sources */,
