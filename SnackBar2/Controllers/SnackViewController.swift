@@ -130,7 +130,7 @@ class SnackViewController: UIViewController {
             
             snackBar.frame = CGRect(
                 x: (self.view.frame.size.width - width) / 2,
-                y: self.view.frame.size.height - 70,
+                y: self.view.frame.size.height - 90,
                 width: width,
                 height: 60
             )
